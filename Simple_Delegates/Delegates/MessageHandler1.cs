@@ -12,5 +12,11 @@ namespace Delegates
         {
             Console.WriteLine("By handler 1: " + msg);
         }
+
+        public static int ShowMassageInConsoleAndReturnValue(string msg)
+        {
+            Console.WriteLine("By handler 1: " + msg);
+            return 0;
+        }
     }
 }

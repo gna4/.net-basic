@@ -12,9 +12,16 @@ namespace Delegates
         static void Main(string[] args)
         {
             Worker w = new Worker();
-            w.StartWork(MessageHandler1.ShowMassageInConsole);
+            //simple delegate
+            w.StartWork1(MessageHandler1.ShowMassageInConsole);
+            w.StartWork1(MessageHandler2.ShowMassageInConsole);
 
-            w.StartWork(MessageHandler2.ShowMassageInConsole);
+            // Action delegate
+            w.StartWork2(MessageHandler1.ShowMassageInConsole);
+            w.StartWork2(MessageHandler2.ShowMassageInConsole);
+
+            // Func delegate
+            w.StartWork3(MessageHandler1.ShowMassageInConsoleAndReturnValue);
         }
     }
 }
